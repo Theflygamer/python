@@ -1,5 +1,5 @@
 import random
-# for in range hvor mange a den terning du vil have 
+# for in range hvor mange af den terning du vil have 
 # nummerdice hvilken terning det er 
 #random.randint den gør dit slag random som hvis det var en rigtigt terning
 # hvis du vil ændre verdien på dem så det her du skal gøre det ((se eksemple))
