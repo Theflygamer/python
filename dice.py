@@ -1,4 +1,5 @@
 import random
+from statistics import mean
 # for in range hvor mange af den terning du vil have 
 # nummerdice hvilken terning det er 
 #random.randint den gør dit slag random som hvis det var en rigtigt terning
@@ -26,5 +27,11 @@ for _ in range(1):
     print ("du slog "+ str (nummerdice5) + "\n")
 
 alt = [nummerdice+nummerdice2+nummerdice3+nummerdice4+nummerdice5];
+
+alt = [nummerdice+nummerdice2+nummerdice3+nummerdice4+nummerdice5];
+number_list = [nummerdice,nummerdice2,nummerdice3,nummerdice4,nummerdice5]
+avg = sum(number_list)/len(number_list)
+print("The average is ", round(avg,2))
+
 
 print("du slog i alt " + str(alt))
