@@ -1,10 +1,10 @@
-from operator import imod
-from re import search
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 import time
+
+options = Options()
+options.add_argument("user-data-dir=C:\\Users\\YOURPATHNAME\\AppData\\Local\\Google\\Chrome\\User Data\\Default")# this make sure you open a browser you have login to (you need to login first time) 
 
 driver = webdriver.Chrome(executable_path=r'C:\Program Files (x86)\chromedriver.exe', chrome_options=options)
 driver.get("https://www.twitch.tv/bu11en")
@@ -14,15 +14,12 @@ find_chat = driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[1]/main
 find_chat.click()
 time.sleep(5)
 
+i=0
+while i <= 10:
+    hit_chat= driver.find_element_by_tag_name('textarea')
+    hit_chat.click()
+    hit_chat.send_keys("!gamble 1000")
+    hit_chat.send_keys(Keys.RETURN)
+    time.sleep(46)
 
-js='$("textarea[aria-label*=\'Send en meddelelse\']").id = "dd"'
-driver.execute_script(js)
-
-#("alert('hey');$('textarea[aria-label*=\'Send en meddelelse\']').id = 'dd'")
-
-time.sleep(1)
-hit_chat= driver.find_element_by_id("dd")
-hit_chat.click()
-hit_chat.send_keys("!gamble 1000")
-hit_chat.send_keys(Keys.RETURN)
-
+driver.exit();
