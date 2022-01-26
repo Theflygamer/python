@@ -6,9 +6,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
 
-options = Options()
-options.add_argument("user-data-dir=C:\\Users\\FrederikTeddyFlyPoin\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
-
 driver = webdriver.Chrome(executable_path=r'C:\Program Files (x86)\chromedriver.exe', chrome_options=options)
 driver.get("https://www.twitch.tv/bu11en")
 time.sleep(5)
