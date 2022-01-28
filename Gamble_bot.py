@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 
 options = Options()
-options.add_argument("user-data-dir=C:\\Users\\\FrederikTeddyFlyPoin\\AppData\\Local\\Google\\Chrome\\User Data\\Default")# this make sure you open a browser you have login to (you need to login first time) 
+options.add_argument("user-data-dir=C:\\Users\\YOURPATH\\AppData\\Local\\Google\\Chrome\\User Data\\Default")# this make sure you open a browser you have login to (you need to login first time) 
 options.add_argument('window-size=2048x1152')
 options.add_argument("--headless")
 driver = webdriver.Chrome(executable_path=r'C:\Program Files (x86)\chromedriver.exe', chrome_options=options)
