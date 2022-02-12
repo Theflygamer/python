@@ -9,7 +9,7 @@ options.add_argument("user-data-dir=C:\\Users\\YOURPATH\\AppData\\Local\\Google\
 options.add_argument('window-size=2048x1152')
 options.add_argument("--headless")
 driver = webdriver.Chrome(executable_path=r'C:\Program Files (x86)\chromedriver.exe', chrome_options=options)
-driver.get("https://www.twitch.tv/bu11en")
+driver.get("https://www.twitch.tv/")
 time.sleep(5)
 
 try:
@@ -26,9 +26,9 @@ i=0
 while i <= 10:
     hit_chat= driver.find_element_by_tag_name('textarea')
     hit_chat.click()
-    hit_chat.send_keys("!gamble 232323")
+    hit_chat.send_keys("")
     hit_chat.send_keys(Keys.RETURN)
-    print ("Gamble done, Cooldown starts now ")
+    print (" ")
     for i in range(46,0,-1):
         time.sleep(1)
         print (i)
